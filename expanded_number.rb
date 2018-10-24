@@ -24,6 +24,7 @@ def expanded_form(num)
   expanded_array = []
   0.upto(num_digits-1) do |n| # This will be 0 up to 1
     single_split_number = split_number[n].to_i*(10**n)
+    next if single_split_number == 0
     expanded_array << single_split_number.to_s
    end
   expanded_array.reverse! # This will be ["10","2"]
