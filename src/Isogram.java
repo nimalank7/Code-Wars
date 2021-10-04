@@ -3,18 +3,19 @@ public class Isogram {
         String lowerCase = str.toLowerCase();
 
         for (int i = 0; i < lowerCase.length(); i++) {
-            int count = 0;
-
-            for (int x = 0; x < lowerCase.length(); x++) {
-                if (lowerCase.charAt(i) == lowerCase.charAt(x)) {
-                    count++;
-                }
-                if (count > 1) {
-                    return false;
-                }
+            int finalI = i;
+            long count = lowerCase.chars().filter(character -> character == lowerCase.charAt(finalI)).count();
+            if (count > 1) {
+                return false;
             }
         }
 
         return true;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(isIsogram("Dermatoglyphics"));
+        System.out.println(isIsogram("aba"));
+        System.out.println(isIsogram("moOse"));
     }
 }
