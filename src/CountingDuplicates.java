@@ -28,17 +28,21 @@ public class CountingDuplicates {
 
     public static int duplicateCount(String text) {
         Map<Character, Integer> searchedChars = new HashMap<>();
-        for (int i = 0; i < text.length(); i++) {
-            char characterToSearch = text.charAt(i);
+        String lowerCase = text.toLowerCase();
+        for (int i = 0; i < lowerCase.length(); i++) {
+            char characterToSearch = lowerCase.charAt(i);
             if (searchedChars.containsKey(characterToSearch)) {
                 continue;
             }
-            int numberOfOccurrences = (int) text.chars().filter(character -> character == characterToSearch).count();
+            int numberOfOccurrences = (int) lowerCase.chars().filter(character -> character == characterToSearch).count();
             if (numberOfOccurrences > 1) {
                 searchedChars.put(characterToSearch, numberOfOccurrences);
             }
 
         }
         return searchedChars.keySet().size();
+    }
+
+    public static void main(String[] args) {
     }
 }
