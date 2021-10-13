@@ -9,4 +9,5 @@ To run ensure that JUnit 5 and Hamcrest is added to the classpath
 * [CountingDuplicates](https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1/train/java)
 * [Order](https://www.codewars.com/kata/55c45be3b2079eccff00010f/train/java)
 * [Descending Order](https://www.codewars.com/kata/5467e4d82edf8bbf40000155/train/java)
-* * [Flatten Sort Array](https://www.codewars.com/kata/57ee99a16c8df7b02d00045f/train/java)
+* [Flatten Sort Array](https://www.codewars.com/kata/57ee99a16c8df7b02d00045f/train/java)
+* [Digital Root](https://www.codewars.com/kata/541c8630095125aba6000c00/train/java)
